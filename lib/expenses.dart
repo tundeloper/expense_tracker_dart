@@ -16,13 +16,19 @@ class Expenses extends StatefulWidget {
 class _ExpensesState extends State<Expenses> {
   final List<Expense> _registeredExpenses = [
     Expense(
-      title: 'Flutter Course',
+      title: 'Accommodation',
       amount: 19.99,
       date: DateTime.now(),
       category: Category.work.toString(),
     ),
     Expense(
-      title: 'Cinema',
+      title: 'Groceries',
+      amount: 15.69,
+      date: DateTime.now(),
+      category: Category.leisure.toString(),
+    ),
+    Expense(
+      title: 'Book',
       amount: 15.69,
       date: DateTime.now(),
       category: Category.leisure.toString(),
@@ -45,7 +51,7 @@ class _ExpensesState extends State<Expenses> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Flutter ExpenseTracker'),
+        title: const Text('Expense Tracker'),
         actions: [
           IconButton(
             onPressed: _openAddExpenseOverlay,
@@ -55,7 +61,7 @@ class _ExpensesState extends State<Expenses> {
       ),
       body: Column(
         children: [
-          const Text('The chart'),
+          // const Text('The chart'),
           Expanded(
             child: ExpensesList(expenses: _registeredExpenses),
           ),
