@@ -29,7 +29,7 @@ class _ExpensesState extends State<Expenses> {
     ),
     Expense(
       title: 'Book',
-      amount: 15.69,
+      amount: 20.69,
       date: DateTime.now(),
       category: Category.leisure.toString(),
     ),
@@ -55,8 +55,8 @@ class _ExpensesState extends State<Expenses> {
         title: const Text('Expense Tracker'),
         actions: [
           SizedBox(
-            height: 100,
-            width: 100,
+            height: 50,
+            width: 50,
             child: IconButton(
               onPressed: _openAddExpenseOverlay,
               icon: const Icon(Icons.add),
