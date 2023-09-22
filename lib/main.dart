@@ -10,8 +10,8 @@ final kDarkColorScheme =
 void main() {
   runApp(
     MaterialApp(
-      darkTheme: ThemeData.dark(useMaterial3: true)
-          .copyWith(colorScheme: kDarkColorScheme),
+      // darkTheme: ThemeData.dark(useMaterial3: true)
+      //     .copyWith(colorScheme: kDarkColorScheme),
       theme: ThemeData(useMaterial3: true).copyWith(
           useMaterial3: true,
           colorScheme: kColorScheme,
