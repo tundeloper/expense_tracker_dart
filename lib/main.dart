@@ -1,3 +1,4 @@
+import 'package:expense_tracker/new_expense.dart';
 import 'package:flutter/material.dart';
 
 import 'package:expense_tracker/expenses.dart';
@@ -33,6 +34,11 @@ void main() {
                   fontWeight: FontWeight.bold,
                   // color: Color.fromARGB(3, 3, 93, 3),
                   fontSize: 16))),
+      initialRoute: '/expense',
+      routes: {
+        '/expense': (context) => const Expenses(), // Home screen
+        '/newExpense': (context) => const NewExpense(), // Second screen
+      },
       home: const Expenses(),
     ),
   );

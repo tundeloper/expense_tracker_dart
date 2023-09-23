@@ -36,7 +36,8 @@ class _ExpensesState extends State<Expenses> {
   ];
 
   void _addExpense () {
-    Navigator.push(context, MaterialPageRoute(builder: (ctx) => const NewExpense()));
+    Navigator.pushNamed(context, '/newExpense');
+    // Navigator.push(context, MaterialPageRoute(builder: (ctx) => const NewExpense()));
   }
 
   // void _openAddExpenseOverlay() {
