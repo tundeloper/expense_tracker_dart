@@ -69,7 +69,19 @@ class _NewExpenseState extends State<NewExpense> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('New Expense')),
+      appBar: AppBar(
+        title: const Text('New Expense'),
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: const Icon(Icons.remove_circle_outline),
+            color: Colors.redAccent,
+            iconSize: 30,
+          )
+        ],
+      ),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(16, 48, 16, 16),
         child: Column(
