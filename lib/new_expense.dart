@@ -72,13 +72,17 @@ class _NewExpenseState extends State<NewExpense> {
       appBar: AppBar(
         title: const Text('New Expense'),
         actions: [
-          IconButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            icon: const Icon(Icons.remove_circle_outline),
-            color: Colors.redAccent,
-            iconSize: 30,
+          SizedBox(
+            height: 50,
+            width:  50,
+            child: IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: const Icon(Icons.remove_circle_outline),
+              color: const Color.fromARGB(255, 188, 100, 242),
+              iconSize: 30,
+            ),
           )
         ],
       ),
