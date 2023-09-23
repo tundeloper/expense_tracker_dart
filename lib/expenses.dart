@@ -35,13 +35,17 @@ class _ExpensesState extends State<Expenses> {
     ),
   ];
 
-  void _openAddExpenseOverlay() {
-    showModalBottomSheet(
-      isScrollControlled: true,
-      context: context,
-      builder: (ctx) => const NewExpense(),
-    );
+  void _addExpense () {
+    Navigator.push(context, MaterialPageRoute(builder: (ctx) => const NewExpense()));
   }
+
+  // void _openAddExpenseOverlay() {
+  //   showModalBottomSheet(
+  //     isScrollControlled: true,
+  //     context: context,
+  //     builder: (ctx) => const NewExpense(),
+  //   );
+  // }
 
   // void _addExpense (Expense expense) {
     
@@ -53,16 +57,16 @@ class _ExpensesState extends State<Expenses> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Expense Tracker'),
-        // actions: [
-        //   SizedBox(
-        //     height: 50,
-        //     width: 50,
-        //     child: IconButton(
-        //       onPressed: _openAddExpenseOverlay,
-        //       icon: const Icon(Icons.add),
-        //     ),
-        //   ),
-        // ],
+        actions: [
+          SizedBox(
+            height: 50,
+            width: 50,
+            child: IconButton(
+              onPressed: _addExpense,
+              icon: const Icon(Icons.add),
+            ),
+          ),
+        ],
       ),
       body: Column(
         children: [
